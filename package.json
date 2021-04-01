@@ -1,0 +1,41 @@
+{
+  "name": "mdast-squeeze-links",
+  "version": "0.1.0",
+  "description": "mdast utility to remove empty links from a tree",
+  "main": "index.js",
+  "repository": "inkdropapp/mdast-squeeze-links",
+  "bugs": "https://github.com/inkdropapp/mdast-squeeze-links/issues",
+  "scripts": {
+    "format": "prettier . -w --loglevel warn",
+    "test": "ava"
+  },
+  "keywords": [
+    "remark",
+    "micromark",
+    "mdast",
+    "ast"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "author": "Takuya Matsuyama <hi@craftz.dog>",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^3.15.0",
+    "mdast-util-from-markdown": "^0.8.5",
+    "mdast-util-to-markdown": "^0.6.5",
+    "prettier": "^2.2.1",
+    "unist-builder": "^2.0.3"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleQuote": true,
+    "bracketSpacing": false,
+    "semi": false,
+    "trailingComma": "none"
+  },
+  "dependencies": {
+    "unist-util-remove": "^2.0.0"
+  }
+}
