@@ -11,7 +11,6 @@ test('mdast', (t) => {
     u('link', { url: '#about' }, [u('text', ' ')])
   ])
   squeezeLinks(tree)
-  console.dir(tree.children[0])
 
   t.is(tree.children.length, 1)
   t.is(tree.children[0].type, 'link')
