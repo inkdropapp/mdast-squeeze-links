@@ -20,8 +20,8 @@ var u = require('unist-builder')
 var squeezeLinks = require('mdast-squeeze-links')
 
 var tree = u('root', [
-  u('link', { url: '#about' }, [u('text', 'About')),
-  u('link', { url: '#about' }, [u('text', ' '))
+  u('link', {url: '#about'}, [u('text', 'About')]),
+  u('link', {url: '#about'}, [u('text', ' ')])
 ])
 
 squeezeLinks(tree)
