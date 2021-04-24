@@ -10,7 +10,7 @@ function squeeze(tree) {
 
 // Whether paragraph is empty or composed only of whitespace.
 function isEmptyLink(node) {
-  return node.type === 'link' && node.children.every(isEmptyText)
+  return node.type === 'link' && node.children instanceof Array && node.children.every(isEmptyText)
 }
 
 function isEmptyText(node) {
