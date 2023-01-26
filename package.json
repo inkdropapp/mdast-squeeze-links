@@ -1,6 +1,6 @@
 {
   "name": "mdast-squeeze-links",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "mdast utility to remove empty links from a tree",
   "type": "module",
   "main": "lib/index.esm.js",
