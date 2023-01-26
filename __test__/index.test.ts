@@ -24,12 +24,9 @@ test('markdown', () => {
   const md = `[](#about)`
   const mdast = fromMarkdown(md)
   expect(typeof mdast).toBe('object')
-  console.log(
-    'original tree:',
-    JSON.stringify(mdast.children[0].children, null, 4)
-  )
+  console.log('original tree:', JSON.stringify(mdast.children[0], null, 4))
   const resolved = squeezeLinks(mdast)
-  console.log('fixed tree:', resolved?.children[0].children)
+  console.log('fixed tree:', resolved?.children[0])
   const result = toMarkdown(mdast)
   console.log('result:', JSON.stringify(result))
   expect(typeof result).toBe('string')
