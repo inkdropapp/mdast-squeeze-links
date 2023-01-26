@@ -2,10 +2,7 @@
   "name": "mdast-squeeze-links",
   "version": "1.0.4",
   "description": "mdast utility to remove empty links from a tree",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "unpkg": "lib/index.umd.js",
-  "module": "lib/index.esm.js",
+  "main": "src/index.ts",
   "repository": "inkdropapp/mdast-squeeze-links",
   "bugs": "https://github.com/inkdropapp/mdast-squeeze-links/issues",
   "scripts": {
@@ -21,7 +18,7 @@
     "ast"
   ],
   "files": [
-    "lib"
+    "src"
   ],
   "author": "Takuya Matsuyama <hi@craftz.dog>",
   "license": "MIT",
