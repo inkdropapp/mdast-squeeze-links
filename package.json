@@ -21,7 +21,7 @@
     "ast"
   ],
   "files": [
-    "src"
+    "lib"
   ],
   "author": "Takuya Matsuyama <hi@craftz.dog>",
   "license": "MIT",
