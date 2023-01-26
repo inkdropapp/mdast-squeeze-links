@@ -11,7 +11,8 @@
   "scripts": {
     "build": "rollup --bundleConfigAsCjs -c",
     "format": "prettier . -w --loglevel warn",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest --config jest.config.js"
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --config jest.config.js",
+    "prepublishOnly": "npm run test && npm run build"
   },
   "keywords": [
     "remark",
