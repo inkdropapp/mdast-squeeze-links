@@ -1,4 +1,4 @@
-import { Root } from 'mdast'
+import { Root, Link, Literal } from 'mdast'
 import { remove } from 'unist-util-remove'
 import { Node } from 'unist'
 
@@ -10,13 +10,9 @@ export function squeezeLinks(tree: Root): Root {
 
 // Whether paragraph is empty or composed only of whitespace.
 function isEmptyLink(node: Node) {
-  return (
-    node.type === 'link' &&
-    node.children instanceof Array &&
-    node.children.every(isEmptyText)
-  )
+  return node.type === 'link' && (node as Link).children.every(isEmptyText)
 }
 
 function isEmptyText(node: Node) {
-  return node.type === 'text' && /^\s*$/.test(node.value as string)
+  return node.type === 'text' && /^\s*$/.test((node as Literal).value as string)
 }
