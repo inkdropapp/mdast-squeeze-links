@@ -2,8 +2,10 @@ import { Root } from 'mdast'
 import { remove } from 'unist-util-remove'
 import { Node } from 'unist'
 
-export function squeezeLinks(tree: Root): Root | null {
-  return remove(tree, { cascade: false }, isEmptyLink)
+export function squeezeLinks(tree: Root): Root {
+  const res = remove(tree, { cascade: false }, isEmptyLink)
+  if (res) return res
+  else return tree
 }
 
 // Whether paragraph is empty or composed only of whitespace.
