@@ -1,6 +1,6 @@
 {
   "name": "mdast-squeeze-links",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "mdast utility to remove empty links from a tree",
   "main": "src/index.ts",
   "repository": "inkdropapp/mdast-squeeze-links",
