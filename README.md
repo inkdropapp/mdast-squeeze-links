@@ -16,17 +16,17 @@ npm install mdast-squeeze-links
 ## Use
 
 ```js
-var u = require('unist-builder')
-var squeezeLinks = require('mdast-squeeze-links')
+import { u } from 'unist-builder'
+import { squeezeLinks } from 'mdast-squeeze-links'
 
-var tree = u('root', [
-  u('link', {url: '#about'}, [u('text', 'About')]),
-  u('link', {url: '#about'}, [u('text', ' ')])
+const tree = u('root', [
+  u('link', { url: '#about' }, [u('text', 'About')]),
+  u('link', { url: '#about' }, [u('text', ' ')])
 ])
 
 squeezeLinks(tree)
 
-console.dir(tree, {depth: null})
+console.dir(tree, { depth: null })
 ```
 
 Yields:
